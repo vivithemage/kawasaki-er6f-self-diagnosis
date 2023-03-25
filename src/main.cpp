@@ -3,7 +3,7 @@
 const int RELAY_PIN = 2;
 bool finished = false;
 int trigger_delay_ms = 100;
-int contact_gap_ms = 500;
+int contact_gap_ms = 100;
 
 
 void relay_open()
@@ -19,7 +19,7 @@ void relay_close()
 void trigger_relay()
 {  
   relay_open();
-  delay(100);
+  delay(trigger_delay_ms);
   relay_close();
 }
 
